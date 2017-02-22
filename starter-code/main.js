@@ -1,9 +1,11 @@
-console.log("JS file is connected to HTML! Woo!")
+// console.log("JS file is connected to HTML! Woo!")
+
 var cardOne = "queen";
 var cardTwo = "queen";
 var cardThree = "king";
 var cardFour = "king";
-/* if (cardTwo === cardFour) {
+
+/*if (cardTwo === cardFour) {
 	alert('You found a match!');
 } else {
 	alert('Sorry, try again.');
@@ -17,7 +19,10 @@ if (cardThree === cardFour) {
 	alert('You found a match!');
 } else {
 	alert('Sorry, try again.');
-} */
+} 
+***This was my code before checking the Assigment Solutions Page. I didn't fully 
+understand the loop, and the code below worked, but it was repetitive.***
+
 var createCards = function() {
 var board = document.getElementById('game-board');
 board.className = "board";
@@ -33,5 +38,15 @@ board.appendChild(cardOne);
 board.appendChild(cardTwo);
 board.appendChild(cardThree);
 board.appendChild(cardFour);
+}
+createCards();*/
+
+var board = document.getElementById('game-board');
+function createCards() {
+	for (var i=0; i<4; i++) {
+		var cardElement = document.createElement('div');
+		cardElement.className = 'card';
+		board.appendChild(cardElement);
+	}
 }
 createCards();
